@@ -21,18 +21,16 @@ struct ContentView: View {
     @State var currentLight: CurrentLight = .red
     @State var buttonTitle = "START"
     
-    
-    
+    private let lightIsOn = 1.0
+    private let lightIsOff = 0.3
+
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
             VStack {
                 trafficLight
-                
                 buttonSettings
-                
-                
             }
         }
     }
@@ -56,26 +54,15 @@ struct ContentView: View {
         Button(action: { buttonAction() }) {
             Text(buttonTitle)
                 .font(.title)
-            
         }
-        
         .foregroundColor(.white)
         .padding()
         .frame(width: 200, height: 40)
         .background(.blue)
         .cornerRadius(25)
-//        .border(/*@START_MENU_TOKEN@*/Color.white/*@END_MENU_TOKEN@*/, width: 10).cornerRadius(19)
-//        .border(.white, width: 5).cornerRadius(20)
-        
-        
-        
     }
     
-    
     private func buttonAction() {
-        
-        let lightIsOn = 1.0
-        let lightIsOff = 0.3
         
         buttonTitle = "NEXT"
         

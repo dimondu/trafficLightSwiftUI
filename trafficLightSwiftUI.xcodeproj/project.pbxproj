@@ -57,9 +57,17 @@
 				F471CEF128CA346A00FF74C1 /* ColorCircleView.swift */,
 				F45315AA28CA1D1C00E6F6C5 /* ContentView.swift */,
 				F45315AC28CA1D1D00E6F6C5 /* Assets.xcassets */,
-				F45315AF28CA1D1D00E6F6C5 /* Preview Assets.xcassets */,
+				F471CF0F28CA659800FF74C1 /* Preview Content */,
 			);
 			path = trafficLightSwiftUI;
+			sourceTree = "<group>";
+		};
+		F471CF0F28CA659800FF74C1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F45315AF28CA1D1D00E6F6C5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
