@@ -15,70 +15,60 @@ enum CurrentLight {
 
 struct ContentView: View {
     
-    @State var redOpacity = 0.3
-    @State var yellowOpacity = 0.3
-    @State var greenOpacity = 0.3
-    @State var currentLight: CurrentLight = .red
-    @State var buttonTitle = "START"
+    @State private var redOpacity = 0.3
+    @State private var yellowOpacity = 0.3
+    @State private var greenOpacity = 0.3
     
-    private let lightIsOn = 1.0
-    private let lightIsOff = 0.3
-
+    @State private var currentLight: CurrentLight = .red
+    
+    @State private var buttonTitle = "START"
+    
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
             VStack {
                 trafficLight
-                buttonSettings
             }
         }
     }
     
     private var trafficLight: some View {
-        VStack {
-            ColorCircleView(
-                color: .init(.sRGB, red: 1, green: 0, blue: 0, opacity: redOpacity)
-            )
-            ColorCircleView(
-                color: .init(.sRGB, red: 1, green: 1, blue: 0, opacity: yellowOpacity)
-            )
-            ColorCircleView(
-                color: .init(.sRGB, red: 0, green: 1, blue: 0, opacity: greenOpacity)
-            )
+        VStack(spacing: 20) {
+            
+            ColorCircleView(color: .red, opacity: redOpacity)
+            
+            ColorCircleView(color: .yellow, opacity: yellowOpacity)
+            
+            ColorCircleView(color: .green, opacity: greenOpacity)
+            
             Spacer()
+            
+            StartButtonView(buttonTitle: buttonTitle) {
+                if buttonTitle == "START" {
+                    buttonTitle = "NEXT"
+                }
+                buttonAction()
+            }
         }
-    }
-    
-    private var buttonSettings: some View {
-        Button(action: { buttonAction() }) {
-            Text(buttonTitle)
-                .font(.title)
-        }
-        .foregroundColor(.white)
         .padding()
-        .frame(width: 200, height: 40)
-        .background(.blue)
-        .cornerRadius(25)
     }
     
     private func buttonAction() {
         
-        buttonTitle = "NEXT"
+        let lightIsOn = 1.0
+        let lightIsOff = 0.3
         
         switch currentLight {
         case .red:
             redOpacity = lightIsOn
-            yellowOpacity = lightIsOff
             greenOpacity = lightIsOff
             currentLight = .yellow
         case .yellow:
             redOpacity = lightIsOff
             yellowOpacity = lightIsOn
-            greenOpacity = lightIsOff
             currentLight = .green
         case .green:
-            redOpacity = lightIsOff
             yellowOpacity = lightIsOff
             greenOpacity = lightIsOn
             currentLight = .red

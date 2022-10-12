@@ -12,6 +12,7 @@
 		F45315AD28CA1D1D00E6F6C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45315AC28CA1D1D00E6F6C5 /* Assets.xcassets */; };
 		F45315B028CA1D1D00E6F6C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45315AF28CA1D1D00E6F6C5 /* Preview Assets.xcassets */; };
 		F471CEF228CA346A00FF74C1 /* ColorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471CEF128CA346A00FF74C1 /* ColorCircleView.swift */; };
+		F4F15F5728CDBA8D004C3304 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F15F5628CDBA8C004C3304 /* StartButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		F45315AC28CA1D1D00E6F6C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F45315AF28CA1D1D00E6F6C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F471CEF128CA346A00FF74C1 /* ColorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleView.swift; sourceTree = "<group>"; };
+		F4F15F5628CDBA8C004C3304 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				F45315A828CA1D1C00E6F6C5 /* trafficLightSwiftUIApp.swift */,
 				F471CEF128CA346A00FF74C1 /* ColorCircleView.swift */,
+				F4F15F5628CDBA8C004C3304 /* StartButtonView.swift */,
 				F45315AA28CA1D1C00E6F6C5 /* ContentView.swift */,
 				F45315AC28CA1D1D00E6F6C5 /* Assets.xcassets */,
 				F471CF0F28CA659800FF74C1 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				F45315AB28CA1D1C00E6F6C5 /* ContentView.swift in Sources */,
 				F471CEF228CA346A00FF74C1 /* ColorCircleView.swift in Sources */,
+				F4F15F5728CDBA8D004C3304 /* StartButtonView.swift in Sources */,
 				F45315A928CA1D1C00E6F6C5 /* trafficLightSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
